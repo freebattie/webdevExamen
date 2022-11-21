@@ -4,6 +4,7 @@
   "description": "",
   "type": "module",
   "scripts": {
+    "test": "jest --coverage",
     "format": "prettier --write *.{jsx,js,tsx,ts,html}",
     "dev": "parcel index.html",
     "build": "npm install --include=dev && npm run build:parcel",

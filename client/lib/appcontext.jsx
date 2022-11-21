@@ -14,4 +14,7 @@ export const Appcontext = React.createContext({
   async createUser(user) {
     return await postJSON("/api/login/new", user);
   },
+  async addOrder(order) {
+    return await postJSON("/api/order", order);
+  },
 });

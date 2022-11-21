@@ -5,6 +5,8 @@ import cookieParser from "cookie-parser";
 import * as path from "path";
 import { requestUser, userLoginRouter } from "./loginRouter.js";
 import { MongoClient } from "mongodb";
+import { userDish } from "./DishRouter.js";
+import { adminControl } from "./adminRouter.js";
 dotenv.config();
 const app = express();
 app.use(bodyParser.json());
@@ -16,36 +18,21 @@ const mongoClient = new MongoClient(process.env.MONGODB_URL);
 mongoClient.connect().then(async () => {
   console.log("connected to mongo db");
 
+  const db = mongoClient.db("catering");
+
   app.use(requestUser(mongoClient.db("catering")));
   app.use("/api/login", userLoginRouter(mongoClient.db("catering")));
-  const db = mongoClient.db("catering");
-  app.get("/api/role", async (req, res) => {
-    const { role } = req.signedCookies;
-    const users = await db.collection("users").find().toArray();
-    const usersNoPass = users.map(({ password, ...item }) => item);
-    console.log(usersNoPass);
-    if (role === "admin") {
-      res.json(usersNoPass);
-    } else if (role == "" || role == "" || role == null) {
-      res.sendStatus(401);
-    } else {
-      res.sendStatus(403);
-    }
-  });
-});
-
-app.put("/api/role", (req, res) => {
-  const { role } = req.signedCookies;
-  if (role === "admin") {
-    const data = req.json();
-    users.forEach((u) => {
-      if (u.username === data.username) {
-        u.role = data.role;
-        u.Name = data.name;
-        u.username = data.username;
-      }
+  app.use("/api/dish", userDish(mongoClient.db("catering")));
+  app.use("/api/admin", adminControl(mongoClient.db("catering")));
+  app.post("/api/order", (req, res) => {
+    const [...arr] = req.body;
+    const list = arr.filter((o) => {
+      return o != null;
     });
-  }
+    const order = { id: 0, order: list };
+    db.collection("orders").insertOne(order);
+    console.log(order);
+  });
 });
 
 app.use(express.static("../client/dist"));

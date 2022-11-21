@@ -3,7 +3,7 @@ import { fetchJSON } from "../lib/http.js";
 
 export function EditUsers() {
   const { loading, error, data, reload } = useLoader(
-    async () => await fetchJSON("/api/role")
+    async () => await fetchJSON("/api/admin")
   );
   if (error) {
     return (
