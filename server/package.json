@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "nodemon server.js",
     "build": "npm install",
-    "test": "jest",
     "start": "node server.js"
   },
   "keywords": [],
