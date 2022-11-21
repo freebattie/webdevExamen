@@ -1,0 +1,39 @@
+{
+  "name": "exam-freebattie",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+
+    "format": "prettier --write *.{jsx,js,tsx,ts} __tests__/**/*.{jsx,js,tsx,ts}",
+    "test:client": "cd client && npm test",
+    "test:server": "cd server && npm test",
+    "test:coverage": "npm run test:client:coverage && npm run test:server:coverage",
+    "test:client:coverage": "cd client && npm test -- --collectCoverage",
+    "test:server:coverage": "cd server && npm test -- --collectCoverage",
+    "dev": "concurrently npm:dev:client  npm:dev:server",
+    "dev:client": "cd client && npm run dev",
+    "dev:server": "cd server && npm run dev",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "cd client && npm run build",
+    "build:server": "cd server && npm run build",
+    "start": "cd server && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pg6301-fall2022/exam-freebattie.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pg6301-fall2022/exam-freebattie/issues"
+  },
+  "homepage": "https://github.com/pg6301-fall2022/exam-freebattie#readme",
+  "devDependencies": {
+    "concurrently": "^7.5.0",
+    "husky": "^8.0.2",
+    "prettier": "^2.7.1"
+  }
+
+}
