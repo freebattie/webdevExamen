@@ -8,13 +8,12 @@ export function NewUser({ setError }) {
 
   const [name, setName] = useState("");
   const { createUser } = useContext(Appcontext);
-  const [loading, setLoading] = useState(false);
+
   const navigate = useNavigate();
 
   async function handleSubmit(e) {
     e.preventDefault();
     try {
-      setLoading(false);
       await createUser({ name, username, password });
       navigate("/");
     } catch (e) {
@@ -24,36 +23,41 @@ export function NewUser({ setError }) {
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit}>
+      <div>
         <div>
-          <div>
-            name:{" "}
+          <label>
+            <strong>name: </strong>
             <input
+              id={name}
               type={"text"}
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
-          </div>
-          <div>
-            username:{" "}
+          </label>
+        </div>
+        <div>
+          <label>
+            <strong>username: </strong>
             <input
               type={"text"}
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
-          </div>
-          <div>
-            password:{" "}
+          </label>
+        </div>
+        <div>
+          <label>
+            <strong>password: </strong>
             <input
               type={"password"}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-          </div>
+          </label>
         </div>
-        <button>Save</button>
-      </form>
-    </div>
+      </div>
+      <button className={"button"}>Save</button>
+    </form>
   );
 }

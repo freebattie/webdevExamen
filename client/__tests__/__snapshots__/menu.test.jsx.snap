@@ -1,296 +1,40 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`users should render logged inn page 1`] = `
+exports[`dish should rener dish 1`] = `
 <div>
-  <div>
-    Name: 
-    testuser
-     username: (
-    test
-    ) role:(
-    )
-    <button>
-      Logout
+  <div
+    class="dish"
+  >
+    <div>
+      name :
+    </div>
+    <div>
+      price:
+      Nok
+    </div>
+    <div>
+      description:
+    </div>
+    <div>
+      vegan: :
+    </div>
+    <div>
+      type Dish :
+    </div>
+    <div>
+      order :
+      1
+    </div>
+    <button
+      class="button"
+    >
+      add
     </button>
-    <div>
-      <a
-        href="/edit"
-      >
-        edit users
-      </a>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`users user not logged inn 1`] = `
-<div>
-  <div>
-    <div>
-      <div>
-        <a
-          href="/login"
-        >
-          Login
-        </a>
-      </div>
-      <div>
-        <a
-          href="/register"
-        >
-          Register new user
-        </a>
-      </div>
-      <div>
-        <a
-          href="/edit"
-        >
-          edit users
-        </a>
-      </div>
-    </div>
-    <center>
-      <div
-        class="menuheader"
-      >
-        DISHES:
-      </div>
-      <div
-        class="menu"
-      >
-        <div
-          class="dish"
-        >
-          <div>
-            name :
-            dish1
-          </div>
-          <div>
-            price:
-            190
-            Nok
-          </div>
-          <div>
-            description:
-            something something
-          </div>
-          <div>
-            vegan: :
-          </div>
-          <div>
-            type Dish :
-            pizza
-          </div>
-          <div>
-            order :
-            0
-          </div>
-          <button
-            class="button"
-          >
-            add
-          </button>
-          <button
-            class="button"
-          >
-            remove
-          </button>
-        </div>
-        <div
-          class="dish"
-        >
-          <div>
-            name :
-            dish2
-          </div>
-          <div>
-            price:
-            210
-            Nok
-          </div>
-          <div>
-            description:
-            something something
-          </div>
-          <div>
-            vegan: :
-          </div>
-          <div>
-            type Dish :
-            pizza
-          </div>
-          <div>
-            order :
-            0
-          </div>
-          <button
-            class="button"
-          >
-            add
-          </button>
-          <button
-            class="button"
-          >
-            remove
-          </button>
-        </div>
-        <div
-          class="dish"
-        >
-          <div>
-            name :
-            dish3
-          </div>
-          <div>
-            price:
-            110
-            Nok
-          </div>
-          <div>
-            description:
-            something something
-          </div>
-          <div>
-            vegan: :
-          </div>
-          <div>
-            type Dish :
-            sandwich
-          </div>
-          <div>
-            order :
-            0
-          </div>
-          <button
-            class="button"
-          >
-            add
-          </button>
-          <button
-            class="button"
-          >
-            remove
-          </button>
-        </div>
-        <div
-          class="dish"
-        >
-          <div>
-            name :
-            dish4
-          </div>
-          <div>
-            price:
-            190
-            Nok
-          </div>
-          <div>
-            description:
-            something something
-          </div>
-          <div>
-            vegan: :
-          </div>
-          <div>
-            type Dish :
-            pizza
-          </div>
-          <div>
-            order :
-            0
-          </div>
-          <button
-            class="button"
-          >
-            add
-          </button>
-          <button
-            class="button"
-          >
-            remove
-          </button>
-        </div>
-        <div
-          class="dish"
-        >
-          <div>
-            name :
-            dish5
-          </div>
-          <div>
-            price:
-            210
-            Nok
-          </div>
-          <div>
-            description:
-            something something
-          </div>
-          <div>
-            vegan: :
-          </div>
-          <div>
-            type Dish :
-            pizza
-          </div>
-          <div>
-            order :
-            0
-          </div>
-          <button
-            class="button"
-          >
-            add
-          </button>
-          <button
-            class="button"
-          >
-            remove
-          </button>
-        </div>
-        <div
-          class="dish"
-        >
-          <div>
-            name :
-            dish6
-          </div>
-          <div>
-            price:
-            110
-            Nok
-          </div>
-          <div>
-            description:
-            something something
-          </div>
-          <div>
-            vegan: :
-          </div>
-          <div>
-            type Dish :
-            sandwich
-          </div>
-          <div>
-            order :
-            0
-          </div>
-          <button
-            class="button"
-          >
-            add
-          </button>
-          <button
-            class="button"
-          >
-            remove
-          </button>
-        </div>
-      </div>
-      <button>
-        Order
-      </button>
-    </center>
+    <button
+      class="button"
+    >
+      remove
+    </button>
   </div>
 </div>
 `;

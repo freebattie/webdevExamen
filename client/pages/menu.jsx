@@ -55,16 +55,6 @@ export const dishes = [
 export function Dish(props) {
   const [number, setNumber] = useState(0);
   let nextId = number;
-  function handelChangeVal(val) {
-    if (val < 0) {
-      if (number - 1 === -1) {
-      } else {
-        setNumber((perv) => perv + val);
-      }
-    } else {
-      setNumber((perv) => perv + val);
-    }
-  }
 
   async function handelAddToList() {
     setNumber((perv) => perv + 1);

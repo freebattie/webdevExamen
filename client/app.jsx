@@ -21,7 +21,7 @@ export function App() {
       <Routes>
         <Route path={"/"} element={<FrontPage />} />
         <Route path={"/login"} element={<Login setError={setError} />} />
-        <Route path={"/register"} element={<NewUser />} />
+        <Route path={"/register"} element={<NewUser setError={setError} />} />
         <Route path={"/edit"} element={<EditUsers />} />
         <Route path={"/error"} element={<Error error={error} />} />
         <Route path={"/errorUser"} element={<ErrorUser />} />

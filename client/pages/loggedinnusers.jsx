@@ -10,7 +10,7 @@ export function LoggedInnUsers(props) {
           await fetch("/api/login", {
             method: "delete",
           });
-          reload();
+          props.reload();
         }}
       >
         Logout

@@ -17,9 +17,9 @@ export function EditUsers() {
   } else {
     return (
       <div>
-        {data.map((u) => {
+        {data.map((u, index) => {
           return (
-            <form>
+            <form key={index}>
               <div>username: {u.username}</div>
               <div>name: {u.name}</div>
               <div>role: {u.role}</div>
