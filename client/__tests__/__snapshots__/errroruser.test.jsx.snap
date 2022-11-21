@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`dish should rener dish 1`] = `
+<div>
+  <div>
+    <div>
+      user exsist
+    </div>
+    <button>
+      back
+    </button>
+  </div>
+</div>
+`;

@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`frontpage should rener frontpage 1`] = `
+<div>
+  <div
+    style="border: 1px solid red; background: Pink;"
+  >
+    An error occurred: 
+    ReferenceError: fetch is not defined
+  </div>
+</div>
+`;
