@@ -45,14 +45,16 @@ exam-freebattie created by GitHub Classroom
 
 ##TESTING
   ###BACKEND
+  
     * [ ] 50% coverage
     * [ ] 60% coverage
     * [ ] 70% coverage
     * [ ] 80% coverage
   ###FRONTEND
+  
     * [ ] 50% coverage
     * [ ] 60% coverage
-    * [ ] 70% coverage
+    * [] 70% coverage
     * [ ] 80% coverage
     
 ##TASK
