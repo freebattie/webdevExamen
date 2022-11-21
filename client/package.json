@@ -41,7 +41,10 @@
       "**/*.jsx",
       "**/*.js",
       "!dist/**",
-      "!coverage/**"
+      "!coverage/**",
+      "!app.jsx",
+      "!index.jsx",
+      "!lib/**"
     ]
   },
   "babel": {

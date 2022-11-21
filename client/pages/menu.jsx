@@ -53,9 +53,11 @@ export const dishes = [
 ];
 
 export function Dish(props) {
-  const [number, setNumber] = useState(0);
+  const [number, setNumber] = useState();
   let nextId = number;
-
+  useEffect(() => {
+    setNumber(props.val);
+  }, []);
   async function handelAddToList() {
     setNumber((perv) => perv + 1);
     nextId++;
@@ -80,9 +82,7 @@ export function Dish(props) {
       };
       const old = [...props.orders];
       old[props.d.id] = item;
-
       props.setOrders(old);
-    } else {
     }
   }
 
@@ -97,9 +97,11 @@ export function Dish(props) {
       <button className={"button"} onClick={() => handelAddToList()}>
         add
       </button>
-      <button className={"button"} onClick={() => handelRemoveToList()}>
-        remove
-      </button>
+      <footer>
+        <button className={"button"} onClick={() => handelRemoveToList()}>
+          remove
+        </button>
+      </footer>
     </div>
   );
 }
@@ -118,7 +120,13 @@ export function Dishes() {
       <div className={"menu"}>
         {dishes.map((d) => {
           return (
-            <Dish key={d.id} d={d} setOrders={setOrders} orders={orders} />
+            <Dish
+              key={d.id}
+              d={d}
+              setOrders={setOrders}
+              orders={orders}
+              val={0}
+            />
           );
         })}
       </div>

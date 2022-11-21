@@ -23,6 +23,47 @@ exports[`dish should rener dish 1`] = `
     </div>
     <div>
       order :
+      3
+    </div>
+    <button
+      class="button"
+    >
+      add
+    </button>
+    <footer>
+      <button
+        class="button"
+      >
+        remove
+      </button>
+    </footer>
+  </div>
+</div>
+`;
+
+exports[`dish should rener dish2 1`] = `
+<div>
+  <div
+    class="dish"
+  >
+    <div>
+      name :
+    </div>
+    <div>
+      price:
+      Nok
+    </div>
+    <div>
+      description:
+    </div>
+    <div>
+      vegan: :
+    </div>
+    <div>
+      type Dish :
+    </div>
+    <div>
+      order :
       1
     </div>
     <button
@@ -30,11 +71,13 @@ exports[`dish should rener dish 1`] = `
     >
       add
     </button>
-    <button
-      class="button"
-    >
-      remove
-    </button>
+    <footer>
+      <button
+        class="button"
+      >
+        remove
+      </button>
+    </footer>
   </div>
 </div>
 `;
