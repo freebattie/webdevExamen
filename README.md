@@ -1,5 +1,4 @@
-[![Node.js CI](https://github.com/freebattie/webdevExamen/actions/workflows/node.js.yml/badge.svg)](https://github.com/freebattie/webdevExamen/actions/workflows/node.js.yml)[![Coverage Status](https://coveralls.io/repos/github/freebattie/webdevExamen/badge.svg?t=B00bi3)](https://coveralls.io/github/freebattie/webdevExamen)
-
+[![Node.js CI](https://github.com/freebattie/webdevExamen/actions/workflows/node.js.yml/badge.svg)](https://github.com/freebattie/webdevExamen/actions/workflows/node.js.yml)
 # exam-freebattie
 exam-freebattie created by GitHub Classroom
 
