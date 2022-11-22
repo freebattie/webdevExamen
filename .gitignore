@@ -9,3 +9,4 @@
 /client/dist/
 /client/.parcel-cache/
 /client/coverage/
+/server/coverage/
