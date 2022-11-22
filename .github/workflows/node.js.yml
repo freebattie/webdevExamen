@@ -30,16 +30,13 @@ jobs:
     - run: npm test
     - name: Collect coverage from client
       uses: ArtiomTr/jest-coverage-report-action@v2
+      id: coverage
       with:
         working-directory: client
-    - name: Coveralls
-      uses: coverallsapp/github-action@master
+        output: report-markdown
+
+    - uses: marocchino/sticky-pull-request-comment@v2
       with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        path-to-lcov: ./client/coverage/lcov.info
-    - name: Coveralls parallel
-      uses: coverallsapp/github-action@master
-      with:
-          github-token: ${{ secrets.github_token }}
-          flag-name: run-${{ matrix.node-version }}
-          path-to-lcov: ./client/coverage/lcov.info
+        message: ${{ steps.coverage.outputs.report }}
+        github-token: ${{ secrets.SECRET_TOKEN }}
+
