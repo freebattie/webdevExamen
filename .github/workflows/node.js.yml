@@ -68,7 +68,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'moviefinderapp'
+          app-name: 'ModernSnack'
           slot-name: 'Production'
           publish-profile: '<publishData><publishProfile profileName="ModernSnack - Web Deploy" publishMethod="MSDeploy" publishUrl="modernsnack.scm.azurewebsites.net:443" msdeploySite="ModernSnack" userName="$ModernSnack" userPWD="AtMk2KpqzoQPLx46P7vlyXT3sn7pK92d1aoF8PmMi2R6vzvMboyoxSNmGpGd" destinationAppUrl="https://modernsnack.azurewebsites.net" SQLServerDBConnectionString="" mySQLDBConnectionString="" hostingProviderForumLink="" controlPanelLink="http://windows.azure.com" webSystem="WebSites"><databases /></publishProfile><publishProfile profileName="ModernSnack - FTP" publishMethod="FTP" publishUrl="ftps://waws-prod-am2-611.ftp.azurewebsites.windows.net/site/wwwroot" ftpPassiveMode="True" userName="ModernSnack\$ModernSnack" userPWD="AtMk2KpqzoQPLx46P7vlyXT3sn7pK92d1aoF8PmMi2R6vzvMboyoxSNmGpGd" destinationAppUrl="https://modernsnack.azurewebsites.net" SQLServerDBConnectionString="" mySQLDBConnectionString="" hostingProviderForumLink="" controlPanelLink="http://windows.azure.com" webSystem="WebSites"><databases /></publishProfile><publishProfile profileName="ModernSnack - Zip Deploy" publishMethod="ZipDeploy" publishUrl="modernsnack.scm.azurewebsites.net:443" userName="$ModernSnack" userPWD="AtMk2KpqzoQPLx46P7vlyXT3sn7pK92d1aoF8PmMi2R6vzvMboyoxSNmGpGd" destinationAppUrl="https://modernsnack.azurewebsites.net" SQLServerDBConnectionString="" mySQLDBConnectionString="" hostingProviderForumLink="" controlPanelLink="http://windows.azure.com" webSystem="WebSites"><databases /></publishProfile></publishData>'
           package: .
