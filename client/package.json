@@ -10,6 +10,7 @@
     "build": "npm install --include=dev && npm run build:parcel",
     "build:parcel": "parcel build index.html"
   },
+
   "keywords": [],
   "author": "",
   "license": "ISC",
