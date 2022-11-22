@@ -1,5 +1,7 @@
+[![Node.js CI](https://github.com/freebattie/webdevExamen/actions/workflows/node.js.yml/badge.svg)](https://github.com/freebattie/webdevExamen/actions/workflows/node.js.yml)
 # exam-freebattie
 exam-freebattie created by GitHub Classroom
+
 
 
 * [x] Some form of Login and access control
@@ -51,10 +53,10 @@ exam-freebattie created by GitHub Classroom
     * [ ] 80% coverage
   ###FRONTEND
   
-    * [ ] 50% coverage
-    * [ ] 60% coverage
-    * [] 70% coverage
-    * [ ] 80% coverage
+    * [x] 50% coverage
+    * [x] 60% coverage
+    * [x] 70% coverage
+    * [x] 80% coverage
     
 ##TASK
 * [ ] see dishes form mongodb whit basic test data (T1)
