@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`loggedinn should rener itemmenu 1`] = `
+<div>
+  <div>
+    Name: 
+    test
+     username: (
+    200
+    ) role:(
+    bla
+    )
+    <div>
+      <div>
+        <div>
+          <div>
+            <button
+              class="button"
+            >
+              Logout
+            </button>
+          </div>
+          <div>
+            <a
+              class="button"
+              href="/myorders"
+            >
+              Received Orders
+            </a>
+          </div>
+          <div>
+            <a
+              class="button"
+              href="/editmenu"
+            >
+              Edit menu
+            </a>
+          </div>
+        </div>
+        <div
+          style="border: 1px solid red; background: Pink;"
+        >
+          An error occurred: 
+          ReferenceError: fetch is not defined
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`itemmenu should rener itemmenu 1`] = `
+<div>
+  <div
+    class="editform"
+  >
+    <form>
+      <div
+        class="editItem"
+      >
+        <label>
+          name:
+          <input
+            type="text"
+            value="test"
+          />
+        </label>
+        <label>
+          price:
+          <input
+            type="number"
+            value="200"
+          />
+        </label>
+        <label>
+          description:
+          <input
+            type="text"
+            value="bla"
+          />
+        </label>
+        <label>
+          description:
+          <input
+            type="text"
+            value="type"
+          />
+        </label>
+      </div>
+      <button
+        class="button"
+      >
+        save
+      </button>
+    </form>
+    <button
+      class="button"
+    >
+      Delete
+    </button>
+  </div>
+</div>
+`;
