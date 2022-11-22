@@ -30,18 +30,12 @@ jobs:
     - run: npm test
     - name: Collect coverage from client
       uses: ArtiomTr/jest-coverage-report-action@v2
-      id: coverage_client
       with:
         working-directory: client
-        output: report-markdown
     - name: Collect coverage from server
       uses: ArtiomTr/jest-coverage-report-action@v2
-      id: coverage_server
       with:
         working-directory: server
-        output: report-markdown
-    - uses: marocchino/sticky-pull-request-comment@v2
-      with:
-        message: ${{ steps.coverage.outputs.report }}
+
 
 
