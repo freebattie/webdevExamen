@@ -3,8 +3,9 @@ import { fetchJSON, postJSON } from "./http.js";
 
 export const Appcontext = React.createContext({
   async listDishes() {
-    return await fetchJSON("/api/dishes");
+    return await fetchJSON("/api/dish");
   },
+
   async fetchLogin() {
     return await fetchJSON("/api/login");
   },
@@ -15,6 +16,9 @@ export const Appcontext = React.createContext({
     return await postJSON("/api/login/new", user);
   },
   async addOrder(order) {
-    return await postJSON("/api/order", order);
+    return await postJSON("/api/dish/orders", order);
+  },
+  async listOrders() {
+    return await fetchJSON("/api/dish/orders");
   },
 });

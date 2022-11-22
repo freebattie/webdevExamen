@@ -1,11 +1,11 @@
-import { LoginLinks } from "../Components/loginlinks.jsx";
-import { Dishes } from "./menu.jsx";
+import { Dishes } from "./dishes.jsx";
+import { Loggedoutlinks } from "../Components/loggedoutlinks.jsx";
 
-export function NotLoggedInnUsers() {
+export function NotLoggedInnUsers({ setError }) {
   return (
     <div>
-      <LoginLinks />
-      <Dishes />
+      <Loggedoutlinks />
+      <Dishes setError={setError} />
     </div>
   );
 }

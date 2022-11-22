@@ -43,9 +43,9 @@
       "**/*.js",
       "!dist/**",
       "!coverage/**",
-      "!app.jsx",
       "!index.jsx",
       "!lib/**"
+
     ]
   },
   "babel": {

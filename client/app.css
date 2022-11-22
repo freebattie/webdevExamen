@@ -23,6 +23,14 @@
     border: solid 2px black;
     height: 200px;
 }
+footer{
+    width: 80px;
+}
+.editItem{
+    display: flex;
+    width: 300px;
+    flex-wrap: wrap;
+}
 .button{
     color: black;
     padding: 5px 2px;
@@ -33,12 +41,40 @@
     margin: 10px;
     font-size: 16px;
     background-color: white;
-    height: 30px;
+
     border: 2px solid black;
-    width: 80px;
+    width: 70px;
     border-radius: 5px;
     transition-duration: 0.4s;
 }
 .menuheader{
     margin-bottom: 20px;
+}
+.orders{
+    display: flex;
+    flex-wrap: wrap;
+}
+.order{
+
+    height: 300px;
+    border: 2px black solid;
+    width: 300px;
+    margin: 10px;
+}
+.items{
+    width: 100px;
+    margin: 10px;
+}
+.ordersheader{
+    width: 100%;
+}
+.editform{
+    width: 400px;
+    border: 2px solid black;
+}
+.itemsToEdit{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
 }

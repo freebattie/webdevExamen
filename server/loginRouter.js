@@ -6,7 +6,7 @@ export function requestUser(mongodb) {
     const { username } = req.signedCookies;
     if (username) {
       const users = await mongodb.collection("users").find().toArray();
-      console.log(users);
+
       req.user = users.find((u) => u.username === username);
       req.role = users.find((u) => {
         if (u.username === username) {
@@ -37,7 +37,7 @@ export function userLoginRouter(mongodb) {
     const user = users.find(
       (u) => u.username === username && u.password === password
     );
-    console.log(users);
+
     if (!user) {
       return res.sendStatus(401);
     }

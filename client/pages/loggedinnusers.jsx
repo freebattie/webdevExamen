@@ -1,22 +1,20 @@
 import { Link } from "react-router-dom";
 
+import { Dishes } from "./dishes.jsx";
+import { LogOut } from "../Components/logout.jsx";
+import { LoggedInnLinks } from "../Components/loggedinnlinks";
+
 export function LoggedInnUsers(props) {
   return (
     <div>
       Name: {props.user.name} username: ({props.user.username}) role:(
       {props.user.role})
-      <button
-        onClick={async () => {
-          await fetch("/api/login", {
-            method: "delete",
-          });
-          props.reload();
-        }}
-      >
-        Logout
-      </button>
+      <LogOut reload={props.reload} />
       <div>
-        <Link to={"/edit"}>edit users</Link>
+        <div>
+          <LoggedInnLinks reload={props.reload} />
+          <Dishes setError={props.setError} />
+        </div>
       </div>
     </div>
   );

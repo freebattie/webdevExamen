@@ -81,3 +81,93 @@ exports[`dish should rener dish2 1`] = `
   </div>
 </div>
 `;
+
+exports[`dishes should rener dishes 1`] = `
+<div>
+  <center>
+    <div
+      class="menuheader"
+    >
+      DISHES:
+    </div>
+    <div
+      class="menu"
+    >
+      <div
+        class="dish"
+      >
+        <div>
+          name :
+          test
+        </div>
+        <div>
+          price:
+          200
+          Nok
+        </div>
+        <div>
+          description:
+          d
+        </div>
+        <div>
+          vegan: :
+        </div>
+        <div>
+          type Dish :
+          pizza
+        </div>
+        <div>
+          order :
+          0
+        </div>
+        <button
+          class="button"
+        >
+          add
+        </button>
+        <footer>
+          <button
+            class="button"
+          >
+            remove
+          </button>
+        </footer>
+      </div>
+    </div>
+    <form>
+      <div>
+        <label>
+          Location:
+          <input
+            type="text"
+            value="location"
+          />
+        </label>
+        <label>
+          date:
+          <input
+            min="2022-11-22"
+            type="date"
+            value=""
+          />
+        </label>
+        <label>
+          time:
+          <input
+            max="21:00"
+            min="08:00"
+            type="time"
+            value="08:00"
+          />
+        </label>
+      </div>
+      <button
+        class="button"
+        data-testid="button"
+      >
+        Order
+      </button>
+    </form>
+  </center>
+</div>
+`;
