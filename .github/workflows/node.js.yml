@@ -32,8 +32,4 @@ jobs:
       uses: ArtiomTr/jest-coverage-report-action@v2
       with:
         working-directory: client
-    - name: Coveralls
-      uses: coverallsapp/github-action@master
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        working-directory: client
+
