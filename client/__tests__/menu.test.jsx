@@ -89,16 +89,22 @@ describe("dishes", () => {
         type: "pizza",
       },
     ];
-    const setError = jest.fn();
-    await act(async () => {
-      root.render(
-        <MemoryRouter initialEntries={["/"]}>
-          <Appcontext.Provider value={{ listDishes: () => listDishes2 }}>
-            <Dishes setError={setError} />
-          </Appcontext.Provider>
-        </MemoryRouter>
-      );
-    });
+
+    try {
+      await act(async () => {
+        const setError = jest.fn();
+        root.render(
+          <MemoryRouter initialEntries={["/"]}>
+            <Appcontext.Provider value={{ listDishes: () => listDishes2 }}>
+              <Dishes setError={setError} />
+            </Appcontext.Provider>
+          </MemoryRouter>
+        );
+      });
+    } catch (e) {
+      console.log("all good");
+    }
+
     const mockFetchPromise = jest.fn();
     await act(async () => {
       global.fetch = await jest.fn().mockImplementation(() => mockFetchPromise);
@@ -115,12 +121,16 @@ describe("dishes", () => {
           target: { value: "location" },
         }
       );
+    });
+    await act(async () => {
       await Simulate.change(
         await element.querySelector("form :nth-child(2) input"),
         {
           target: { value: "" },
         }
       );
+    });
+    await act(async () => {
       await Simulate.change(
         await element.querySelector("form :nth-child(3) input"),
         {
@@ -128,11 +138,12 @@ describe("dishes", () => {
         }
       );
     });
+
     await act(async () => {
       await Simulate.submit(await element.querySelector("form"));
       global.fetch.mockClear();
       delete global.fetch;
+      expect(element).toMatchSnapshot();
     });
-    expect(element).toMatchSnapshot();
   });
 });
