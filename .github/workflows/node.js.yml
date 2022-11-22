@@ -30,13 +30,13 @@ jobs:
     - run: npm test
     - name: Collect coverage from client
       uses: ArtiomTr/jest-coverage-report-action@v2
-      id: coverage
+      id: coverage client
       with:
         working-directory: client
         output: report-markdown
     - name: Collect coverage from server
       uses: ArtiomTr/jest-coverage-report-action@v2
-      id: coverage
+      id: coverage server
       with:
         working-directory: server
         output: report-markdown
