@@ -25,17 +25,17 @@ export function Login({ setError }) {
     <form onSubmit={handleSubmit}>
       <h1>Please log in</h1>
       <div>
-        Username:{" "}
+        <strong>Username:</strong>
         <input value={username} onChange={(e) => setUsername(e.target.value)} />
       </div>
-      <div>
-        Password:{" "}
+      <footer>
+        <strong>password:</strong>
         <input
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-      </div>
+      </footer>
       <div>
         <button>Log in</button>
       </div>

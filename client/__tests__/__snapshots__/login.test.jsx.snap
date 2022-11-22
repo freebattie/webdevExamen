@@ -7,20 +7,22 @@ exports[`login should render login 1`] = `
       Please log in
     </h1>
     <div>
-      Username:
-       
+      <strong>
+        Username:
+      </strong>
       <input
-        value=""
+        value="Petter petter"
       />
     </div>
-    <div>
-      Password:
-       
+    <footer>
+      <strong>
+        password:
+      </strong>
       <input
         type="password"
-        value=""
+        value="Petter petter"
       />
-    </div>
+    </footer>
     <div>
       <button>
         Log in
@@ -28,8 +30,8 @@ exports[`login should render login 1`] = `
     </div>
     <pre>
       {
-  "username": "",
-  "password": ""
+  "username": "Petter petter",
+  "password": "Petter petter"
 }
     </pre>
   </form>

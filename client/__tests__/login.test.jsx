@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import { createRoot } from "react-dom/client";
-import { act } from "react-dom/test-utils";
+import { act, Simulate } from "react-dom/test-utils";
 import { MemoryRouter } from "react-router-dom";
 import { Login } from "../pages/login";
 
@@ -14,15 +14,28 @@ describe("login", () => {
 
     //creat a React root from that id
     const root = createRoot(element);
-    const fn = jest.fn();
+    const setError = jest.fn();
     await act(async () => {
       root.render(
         <MemoryRouter initialEntries={["/"]}>
-          <Login />
+          <Login setError={setError} />
         </MemoryRouter>
       );
     });
-
+    await act(async () => {
+      await Simulate.change(
+        await element.querySelector("form:nth-of-type(1)  input"),
+        {
+          target: { value: "Petter petter" },
+        }
+      );
+      await Simulate.change(await element.querySelector("form footer input"), {
+        target: { value: "Petter petter" },
+      });
+    });
+    await act(async () => {
+      await Simulate.submit(await element.querySelector("form"));
+    });
     await act(async () => {});
 
     expect(element).toMatchSnapshot();
