@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`error should render error 1`] = `
+<div>
+  <div
+    style="border: 1px solid red; background: Pink;"
+  >
+    An error occurred: 
+    this is a test
+  </div>
+</div>
+`;

@@ -4,7 +4,10 @@ import { createRoot } from "react-dom/client";
 import { act, Simulate } from "react-dom/test-utils";
 import { MemoryRouter } from "react-router-dom";
 
-import { Dish } from "../pages/menu";
+import { Appcontext } from "../lib/appcontext.jsx";
+import { useLoader } from "../lib/useLoading.jsx";
+import { Dish } from "../pages/dish.jsx";
+import { Dishes } from "../pages/dishes.jsx";
 
 global.IS_REACT_ACT_ENVIRONMENT = true;
 
@@ -68,5 +71,68 @@ describe("dish", () => {
     expect(element).toMatchSnapshot();
     global.fetch.mockClear();
     delete global.fetch;
+  });
+});
+describe("dishes", () => {
+  it("should rener dishes", async function () {
+    const element = document.createElement("div");
+
+    //creat a React root from that id
+    const root = createRoot(element);
+    const listDishes2 = [
+      {
+        id: 0,
+        name: "test",
+        price: 200,
+        description: "d",
+        vegan: true,
+        type: "pizza",
+      },
+    ];
+    const setError = jest.fn();
+    await act(async () => {
+      root.render(
+        <MemoryRouter initialEntries={["/"]}>
+          <Appcontext.Provider value={{ listDishes: () => listDishes2 }}>
+            <Dishes setError={setError} />
+          </Appcontext.Provider>
+        </MemoryRouter>
+      );
+    });
+    const mockFetchPromise = jest.fn();
+    await act(async () => {
+      global.fetch = await jest.fn().mockImplementation(() => mockFetchPromise);
+    });
+    await act(async () => {
+      await Simulate.click(
+        await element.querySelector("[data-testid=button]button")
+      );
+    });
+    await act(async () => {
+      await Simulate.change(
+        await element.querySelector("form :nth-child(1) input"),
+        {
+          target: { value: "location" },
+        }
+      );
+      await Simulate.change(
+        await element.querySelector("form :nth-child(2) input"),
+        {
+          target: { value: "" },
+        }
+      );
+      await Simulate.change(
+        await element.querySelector("form :nth-child(3) input"),
+        {
+          target: { value: "08:00" },
+        }
+      );
+    });
+    await act(async () => {
+      await Simulate.submit(await element.querySelector("form"));
+      global.fetch.mockClear();
+      delete global.fetch;
+    });
+    expect(element).toMatchSnapshot();
   });
 });

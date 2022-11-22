@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`app should rener App 1`] = `
+<div>
+  <div
+    style="border: 1px solid red; background: Pink;"
+  >
+    An error occurred: 
+    ReferenceError: fetch is not defined
+  </div>
+</div>
+`;
+
+exports[`app should rener orders 1`] = `
+<div>
+  <div
+    class="orders"
+  >
+    <div
+      class="ordersheader"
+    >
+      <h1>
+        ORDER FOR USER: 
+      </h1>
+    </div>
+    <div
+      class="order"
+    >
+      <div>
+        name: 
+        0
+      </div>
+      <div>
+        date: 
+      </div>
+      <div>
+        time: 
+      </div>
+      <div>
+        location: 
+      </div>
+      <div
+        class="items"
+      >
+        <div>
+          name: 
+          test
+        </div>
+        <div>
+          price: 
+          200
+        </div>
+        <div>
+          how many: 
+        </div>
+      </div>
+      <div>
+        total: 
+      </div>
+    </div>
+    <button>
+      back
+    </button>
+    <button>
+      back
+    </button>
+  </div>
+</div>
+`;
