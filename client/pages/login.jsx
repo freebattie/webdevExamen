@@ -29,7 +29,7 @@ export function Login({ setError }) {
         <input value={username} onChange={(e) => setUsername(e.target.value)} />
       </div>
       <footer>
-        <strong>password: </strong>
+        <strong>password:</strong>
         <input
           type="password"
           value={password}
