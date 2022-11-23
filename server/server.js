@@ -59,7 +59,8 @@ app.use((req, res, next) => {
     next();
   }
 });
-const server = app.listen(port, () => {
+
+const server = app.listen(process.env.PORT || 3000, () => {
   console.log(`http://localhost:${server.address().port}`);
   server.on("upgrade", (req, socket, head) => {
     wsServer.handleUpgrade(req, socket, head, (socket) => {
