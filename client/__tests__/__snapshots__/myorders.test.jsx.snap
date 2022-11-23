@@ -2,12 +2,28 @@
 
 exports[`app should rener App 1`] = `
 <div>
-  <div
-    style="border: 1px solid red; background: Pink;"
-  >
-    An error occurred: 
-    ReferenceError: fetch is not defined
-  </div>
+  <center>
+    <div
+      class="error"
+      style="border: 1px solid red; background: Pink;"
+    >
+      An error occurred: 
+      ReferenceError: fetch is not defined
+      <div>
+        <button
+          class="button"
+        >
+          back
+        </button>
+         
+        <button
+          class="button"
+        >
+          login
+        </button>
+      </div>
+    </div>
+  </center>
 </div>
 `;
 
@@ -22,6 +38,16 @@ exports[`app should rener orders 1`] = `
       <h1>
         ORDER FOR USER: 
       </h1>
+      <button
+        class="button"
+      >
+        back
+      </button>
+      <button
+        class="button"
+      >
+        Logout
+      </button>
     </div>
     <div
       class="order"
@@ -58,12 +84,6 @@ exports[`app should rener orders 1`] = `
         total: 
       </div>
     </div>
-    <button>
-      back
-    </button>
-    <button>
-      back
-    </button>
   </div>
 </div>
 `;

@@ -11,29 +11,29 @@ exports[`login should render login 1`] = `
         Username:
       </strong>
       <input
+        class="input"
         value="Petter petter"
       />
     </div>
-    <footer>
+    <footer
+      class="pass"
+    >
       <strong>
         password:
       </strong>
       <input
+        class="input"
         type="password"
         value="Petter petter"
       />
     </footer>
     <div>
-      <button>
+      <button
+        class="button"
+      >
         Log in
       </button>
     </div>
-    <pre>
-      {
-  "username": "Petter petter",
-  "password": "Petter petter"
-}
-    </pre>
   </form>
 </div>
 `;

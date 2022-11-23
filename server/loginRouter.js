@@ -25,7 +25,7 @@ export function userLoginRouter(mongodb) {
       return res.sendStatus(204);
     }
     const { username, name, role } = req.user;
-    return res.json({ username, name, role });
+    return res.json({ username, name, role }).sendStatus(200);
   });
 
   login.post("/", async (req, res) => {

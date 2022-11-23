@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-export function LogOut(props) {
+export function LogOutMain(props) {
   const navigate = useNavigate();
   return (
     <button
@@ -9,6 +9,7 @@ export function LogOut(props) {
         await fetch("/api/login", {
           method: "delete",
         });
+        props.reload();
         navigate("/");
       }}
     >

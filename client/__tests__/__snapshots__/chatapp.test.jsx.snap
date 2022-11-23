@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`app should rener App 1`] = `
+<div>
+  <header
+    class="footermove headerText"
+  >
+    Modern Snack Chat
+  </header>
+  <main
+    class=" border"
+  >
+    <div>
+      <strong>
+        :
+      </strong>
+       
+    </div>
+    <div>
+      <strong>
+        :
+      </strong>
+       
+    </div>
+  </main>
+  <footer
+    class="footermove"
+  >
+    <form
+      class="formsize"
+    >
+      <input
+        class="input2"
+        value=""
+      />
+      <button
+        class="button"
+      >
+        Send
+      </button>
+      <button
+        class="button"
+      >
+        back
+      </button>
+    </form>
+  </footer>
+</div>
+`;

@@ -9,6 +9,9 @@ export function LoggedInnEmployee(props) {
       <div>
         <div>
           <EmployeeLinks reload={props.reload} />
+          <button className={"button"} onClick={(e) => navigate("/chat")}>
+            chat
+          </button>
           <Dishes setError={props.setError} />
         </div>
       </div>

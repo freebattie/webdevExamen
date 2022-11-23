@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`app should rener App 1`] = `
+<div>
+  <div
+    class="editform"
+  >
+    <form>
+      <div
+        class="editItem"
+      >
+        <label>
+          name:
+          <input
+            type="text"
+            value="Petter petter"
+          />
+        </label>
+        <label>
+          price:
+          <input
+            type="number"
+            value="Petter petter"
+          />
+        </label>
+        <label>
+          description:
+          <input
+            type="text"
+            value="Petter petter"
+          />
+        </label>
+        <label>
+          type:
+          <input
+            type="text"
+            value="Petter petter"
+          />
+        </label>
+      </div>
+      <button
+        class="button"
+      >
+        save
+      </button>
+    </form>
+    <button
+      class="button"
+    >
+      back
+    </button>
+    <button
+      class="button"
+    >
+      home
+    </button>
+    <button
+      class="button"
+    >
+      Logout
+    </button>
+  </div>
+</div>
+`;

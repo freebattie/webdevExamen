@@ -3,6 +3,7 @@ import { Appcontext } from "../lib/appcontext.jsx";
 import { useLoader } from "../lib/useLoading.jsx";
 import { ErrorMsg } from "./errormsg.jsx";
 import { useNavigate } from "react-router-dom";
+import { LogOut } from "../Components/logout";
 
 export function MyOrders() {
   const { listOrders } = useContext(Appcontext);
@@ -21,6 +22,10 @@ export function MyOrders() {
     <div className={"orders"}>
       <div className={"ordersheader"}>
         <h1>ORDER FOR USER: </h1>
+        <button className={"button"} onClick={() => navigate("/")}>
+          back
+        </button>
+        <LogOut />
       </div>
       {data.map((o) => {
         return (
@@ -43,8 +48,6 @@ export function MyOrders() {
           </div>
         );
       })}
-      <button onClick={() => navigate("/")}>back</button>
-      <button onClick={() => navigate("/")}>back</button>
     </div>
   );
 }

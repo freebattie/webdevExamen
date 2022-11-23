@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`app should rener App 1`] = `
+<div>
+  <center>
+    <form
+      class="loginChat"
+    >
+      <div
+        class="loginChatfld"
+      >
+        <label>
+          Username:
+          <input
+            class="input"
+            value=""
+          />
+        </label>
+        <button
+          class="button"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </center>
+</div>
+`;

@@ -8,7 +8,7 @@ import { addGivenOrder } from "../lib/addgivenorder.jsx";
 
 export function Dishes({ setError }) {
   const { listDishes } = useContext(Appcontext);
-  const [orders, setOrders] = useState([]);
+  const [orders, setOrders] = useState([{ price: 0, size: 0 }]);
   const [time, setTime] = useState("08:00");
   const [date, setDate] = useState("");
   const [location, setLocation] = useState("");
@@ -22,9 +22,10 @@ export function Dishes({ setError }) {
     e.preventDefault();
 
     const val = [...orders];
+    console.log(val);
     let max = 0;
     val.forEach((e) => {
-      if (e !== undefined) {
+      if (e != null) {
         max += e.price * e.size;
       } else {
       }
@@ -68,7 +69,7 @@ export function Dishes({ setError }) {
     <center>
       <div className={"menuheader"}>DISHES:</div>
       <div className={"menu"}>
-        {data.map((d) => {
+        {data.map((d, index) => {
           return (
             <Dish
               key={d.id}
@@ -76,6 +77,7 @@ export function Dishes({ setError }) {
               setOrders={setOrders}
               orders={orders}
               val={0}
+              index={index}
             />
           );
         })}
@@ -85,6 +87,7 @@ export function Dishes({ setError }) {
           <label>
             Location:
             <input
+              className={"input"}
               type="text"
               value={location}
               onChange={(e) => setLocation(e.target.value)}
@@ -93,6 +96,7 @@ export function Dishes({ setError }) {
           <label>
             date:
             <input
+              className={"input"}
               type="date"
               value={date}
               min={today}
@@ -102,6 +106,7 @@ export function Dishes({ setError }) {
           <label>
             time:
             <input
+              className={"input"}
               type="time"
               value={time}
               min={"08:00"}

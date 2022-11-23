@@ -1,11 +1,19 @@
 import React from "react";
-import { fetchJSON, postJSON } from "./http.js";
+import { deleteJSON, fetchJSON, postJSON, putJSON } from "./http.js";
 
 export const Appcontext = React.createContext({
   async listDishes() {
     return await fetchJSON("/api/dish");
   },
-
+  async updateDish(dish) {
+    return await putJSON("/api/dish", dish);
+  },
+  async addDish(dish) {
+    return await postJSON("/api/dish", dish);
+  },
+  async removeDish(dish) {
+    return await deleteJSON("/api/dish", dish);
+  },
   async fetchLogin() {
     return await fetchJSON("/api/login");
   },

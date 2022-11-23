@@ -3,12 +3,29 @@
 exports[`dish should rener dish 1`] = `
 <div>
   <div>
-    <div>
-      user exsist
-    </div>
-    <button>
-      back
-    </button>
+    <center>
+      <div
+        class="error"
+        style="border: 1px solid red; background: Pink;"
+      >
+        <div>
+          user exsist
+        </div>
+        <div>
+          <button
+            class="button"
+          >
+            back
+          </button>
+           
+          <button
+            class="button"
+          >
+            login
+          </button>
+        </div>
+      </div>
+    </center>
   </div>
 </div>
 `;

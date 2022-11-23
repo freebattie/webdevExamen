@@ -16,9 +16,6 @@ exports[`dish should rener dish 1`] = `
       description:
     </div>
     <div>
-      vegan: :
-    </div>
-    <div>
       type Dish :
     </div>
     <div>
@@ -55,9 +52,6 @@ exports[`dish should rener dish2 1`] = `
     </div>
     <div>
       description:
-    </div>
-    <div>
-      vegan: :
     </div>
     <div>
       type Dish :
@@ -110,9 +104,6 @@ exports[`dishes should rener dishes 1`] = `
           d
         </div>
         <div>
-          vegan: :
-        </div>
-        <div>
           type Dish :
           pizza
         </div>
@@ -139,6 +130,7 @@ exports[`dishes should rener dishes 1`] = `
         <label>
           Location:
           <input
+            class="input"
             type="text"
             value="location"
           />
@@ -146,7 +138,8 @@ exports[`dishes should rener dishes 1`] = `
         <label>
           date:
           <input
-            min="2022-11-22"
+            class="input"
+            min="2022-11-23"
             type="date"
             value=""
           />
@@ -154,6 +147,7 @@ exports[`dishes should rener dishes 1`] = `
         <label>
           time:
           <input
+            class="input"
             max="21:00"
             min="08:00"
             type="time"

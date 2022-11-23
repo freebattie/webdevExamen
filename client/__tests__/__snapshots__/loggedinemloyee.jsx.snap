@@ -1,13 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`users should render logged inn page 1`] = `
+exports[`loggedinn should rener itemmenu 1`] = `
 <div>
   <div>
     Name: 
-    testuser
-     username: (
     test
+     username: (
+    200
     ) role:(
+    bla
     )
     <div>
       <div>
@@ -24,7 +25,15 @@ exports[`users should render logged inn page 1`] = `
               class="button"
               href="/myorders"
             >
-              show orders
+              Received Orders
+            </a>
+          </div>
+          <div>
+            <a
+              class="button"
+              href="/editmenu"
+            >
+              Edit menu
             </a>
           </div>
         </div>
@@ -57,39 +66,6 @@ exports[`users should render logged inn page 1`] = `
         </center>
       </div>
     </div>
-  </div>
-</div>
-`;
-
-exports[`users user not logged inn 1`] = `
-<div>
-  <div>
-    <div>
-      <div>
-        <a
-          class="button"
-          href="/login"
-        >
-          Login
-        </a>
-      </div>
-      <div>
-        <a
-          class="button"
-          href="/register"
-        >
-          Register new user
-        </a>
-      </div>
-    </div>
-    <button
-      class="button"
-    >
-      chat
-    </button>
-    <h1>
-      Loading....
-    </h1>
   </div>
 </div>
 `;

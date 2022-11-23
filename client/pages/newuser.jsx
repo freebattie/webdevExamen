@@ -23,41 +23,49 @@ export function NewUser({ setError }) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
+    <div>
+      <form onSubmit={handleSubmit}>
         <div>
-          <label>
-            <strong>name: </strong>
-            <input
-              id={name}
-              type={"text"}
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
-          </label>
+          <div>
+            <label>
+              <strong>name: </strong>
+              <input
+                className={"input"}
+                id={name}
+                type={"text"}
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+            </label>
+          </div>
+          <div>
+            <label>
+              <strong>username: </strong>
+              <input
+                className={"input"}
+                type={"text"}
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+              />
+            </label>
+          </div>
+          <div>
+            <label>
+              <strong>password: </strong>
+              <input
+                className={"input"}
+                type={"password"}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </label>
+          </div>
         </div>
-        <div>
-          <label>
-            <strong>username: </strong>
-            <input
-              type={"text"}
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-            />
-          </label>
-        </div>
-        <div>
-          <label>
-            <strong>password: </strong>
-            <input
-              type={"password"}
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </label>
-        </div>
-      </div>
-      <button className={"button"}>Save</button>
-    </form>
+        <button className={"button"}>Save</button>
+      </form>
+      <button className={"button"} onClick={(e) => navigate("/")}>
+        back
+      </button>
+    </div>
   );
 }
