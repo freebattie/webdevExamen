@@ -46,8 +46,8 @@ describe("user router", () => {
     await request(app)
       .post("/api/login/new")
       .send({
-        username: "somebody",
-        password: "secret",
+        username: "test",
+        password: "123",
       })
       .expect(200);
   });
@@ -60,10 +60,15 @@ describe("user router", () => {
   });
 
   it("login working", async () => {
-    await request(app)
+    const agent = request.agent(app);
+    await agent
       .post("/api/login")
-      .send({ username: "somebody", password: "secret" })
+      .send({ username: "test", password: "1234" })
       .expect(200);
+
+    const res = await agent.get("/api/login").expect(200);
+    const res2 = await agent.get("/").expect(200);
+    expect(res.body.username).toContain("test");
   });
   it("wrong username working", async () => {
     await request(app)
@@ -107,7 +112,7 @@ describe("user router", () => {
       .send({ username: "test", password: "1234" })
       .expect(200);
     const list = [{ name: "test" }, { name: "test" }];
-    const profileResponse = await agent.get("/");
+
     await agent
       .post("/api/dish/orders")
       .send({ orders: [{ name: "yes" }, { name: "yes" }] })
@@ -118,7 +123,7 @@ describe("user router", () => {
     const agent = request.agent(app);
     await agent
       .post("/api/login")
-      .send({ username: "somebody", password: "secret" })
+      .send({ username: "frank", password: "1234" })
       .expect(200);
     const profileResponse = await agent.get("/");
     expect(profileResponse.status).toBe(200);

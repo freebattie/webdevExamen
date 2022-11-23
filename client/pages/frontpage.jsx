@@ -5,8 +5,10 @@ import { LoggedInnUsers } from "./loggedinnusers.jsx";
 import { NotLoggedInnUsers } from "./notloggedinn.jsx";
 import { ErrorMsg } from "./errormsg.jsx";
 import { LoggedInnEmployee } from "./loggedinnemployee.jsx";
+import { useNavigate } from "react-router-dom";
 
 export function FrontPage({ setError }) {
+  const navigate = useNavigate();
   const { loading, error, data, reload } = useLoader(
     async () => await fetchJSON("/api/login")
   );
@@ -31,6 +33,9 @@ export function FrontPage({ setError }) {
       ) : (
         <NotLoggedInnUsers setError={setError} />
       )}
+      <div>
+        <button onClick={(e) => navigate("/chat")}>chat</button>
+      </div>
     </div>
   );
 }

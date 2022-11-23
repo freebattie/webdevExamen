@@ -7,8 +7,22 @@ import { requestUser, userLoginRouter } from "./loginRouter.js";
 import { MongoClient } from "mongodb";
 import { userDish } from "./DishRouter.js";
 import { adminControl } from "./adminRouter.js";
+import { WebSocketServer } from "ws";
+
 dotenv.config();
 const app = express();
+const sockets = [];
+const wsServer = new WebSocketServer({ server: app, path: "/api/chat" });
+wsServer.on("connection", (socket) => {
+  sockets.push(socket);
+
+  socket.on("message", (message) => {
+    console.log("Message: " + message);
+    for (const recipient of sockets) {
+      recipient.send(message.toString());
+    }
+  });
+});
 app.use(bodyParser.json());
 app.use(cookieParser(process.env.COOKIE_SECRET));
 const port = process.env.PORT || 3000;
@@ -46,5 +60,11 @@ app.use((req, res, next) => {
   }
 });
 const server = app.listen(port, () => {
-  console.log(`server started at http://localhost:${server.address().port}`);
+  console.log(`http://localhost:${server.address().port}`);
+  server.on("upgrade", (req, socket, head) => {
+    wsServer.handleUpgrade(req, socket, head, (socket) => {
+      console.log("Connected");
+      wsServer.emit("connection", socket, req);
+    });
+  });
 });

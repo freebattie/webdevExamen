@@ -78,3 +78,23 @@ footer{
     flex-wrap: wrap;
 
 }
+
+#app {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+
+main {
+    background-color: aliceblue;
+}
+
+footer form {
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+}
+
+footer form input {
+    flex: 1;
+}

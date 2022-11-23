@@ -16,9 +16,6 @@ exports[`dish should rener dish 1`] = `
       description:
     </div>
     <div>
-      vegan: :
-    </div>
-    <div>
       type Dish :
     </div>
     <div>
@@ -55,9 +52,6 @@ exports[`dish should rener dish2 1`] = `
     </div>
     <div>
       description:
-    </div>
-    <div>
-      vegan: :
     </div>
     <div>
       type Dish :
@@ -110,9 +104,6 @@ exports[`dishes should rener dishes 1`] = `
           d
         </div>
         <div>
-          vegan: :
-        </div>
-        <div>
           type Dish :
           pizza
         </div>
@@ -146,7 +137,7 @@ exports[`dishes should rener dishes 1`] = `
         <label>
           date:
           <input
-            min="2022-11-22"
+            min="2022-11-23"
             type="date"
             value=""
           />

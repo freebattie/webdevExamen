@@ -61,8 +61,10 @@ exports[`app should rener orders 1`] = `
     <button>
       back
     </button>
-    <button>
-      back
+    <button
+      class="button"
+    >
+      Logout
     </button>
   </div>
 </div>

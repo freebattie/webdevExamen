@@ -8,7 +8,7 @@ import { addGivenOrder } from "../lib/addgivenorder.jsx";
 
 export function Dishes({ setError }) {
   const { listDishes } = useContext(Appcontext);
-  const [orders, setOrders] = useState([]);
+  const [orders, setOrders] = useState([{}]);
   const [time, setTime] = useState("08:00");
   const [date, setDate] = useState("");
   const [location, setLocation] = useState("");
@@ -22,6 +22,7 @@ export function Dishes({ setError }) {
     e.preventDefault();
 
     const val = [...orders];
+    console.log(val);
     let max = 0;
     val.forEach((e) => {
       if (e !== undefined) {
@@ -68,7 +69,7 @@ export function Dishes({ setError }) {
     <center>
       <div className={"menuheader"}>DISHES:</div>
       <div className={"menu"}>
-        {data.map((d) => {
+        {data.map((d, index) => {
           return (
             <Dish
               key={d.id}
@@ -76,6 +77,7 @@ export function Dishes({ setError }) {
               setOrders={setOrders}
               orders={orders}
               val={0}
+              index={index}
             />
           );
         })}

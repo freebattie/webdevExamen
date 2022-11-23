@@ -28,3 +28,27 @@ export async function postJSON(path, json) {
     throw new HttpError(res.status, res.statusText);
   }
 }
+export async function deleteJSON(path, json) {
+  const res = await fetch(path, {
+    method: "DELETE",
+    headers: {
+      "content-type": "application/json",
+    },
+    body: JSON.stringify(json),
+  });
+  if (!res.ok) {
+    throw new HttpError(res.status, res.statusText);
+  }
+}
+export async function putJSON(path, json) {
+  const res = await fetch(path, {
+    method: "PUT",
+    headers: {
+      "content-type": "application/json",
+    },
+    body: JSON.stringify(json),
+  });
+  if (!res.ok) {
+    throw new HttpError(res.status, res.statusText);
+  }
+}

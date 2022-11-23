@@ -11,11 +11,11 @@ export function adminControl(mongodb) {
 
     return res.json(users);
   });
-  admin.put("/edit", async (req, res) => {
+  admin.put("/", async (req, res) => {
     const users = await mongodb.collection("users").find().toArray();
     const { role } = req.signedCookies;
     if (role === "admin") {
-      const data = req.json();
+      const data = req.body;
       users.forEach((u) => {
         if (u.username === data.username) {
           u.role = data.role;
@@ -23,7 +23,8 @@ export function adminControl(mongodb) {
           u.username = data.username;
         }
       });
-    }
+      res.sendStatus(204);
+    } else res.sendStatus(401);
   });
   return admin;
 }
