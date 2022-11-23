@@ -10,3 +10,5 @@
 /client/.parcel-cache/
 /client/coverage/
 /server/coverage/
+/.deployment
+/.vscode/
