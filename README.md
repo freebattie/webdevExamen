@@ -14,19 +14,19 @@ i decided to hardcode the azure info to the yml file and the database info in th
 
 
 ### users
-starting users:
-username: hansemann
-password: 4321
-username:Petter123
-password:1234
+### starting users:
+* username: hansemann
+* password: 4321
+* username:Petter123
+* password:1234
 
-admin
-username:administrator
-password:1234;
+### admin
+* username:administrator
+* password:1234;
 
-emp
-username:emp
-password:1234
+### emp
+* username:emp
+* password:1234
 
 when you get to the homepage you can see all dishes but if you try to order when not logged inn
 you get a error message and link to home/login
@@ -49,7 +49,8 @@ when you are logged in as administrator or employ you can see all users orders
 * api/dish/orders (GET,POST)
 
 ### admin
-* api/admin (Get,PUT) Only on serverside and coverd in test to see all user and edit user
+* api/admin (Get,PUT) 
+  * Only on serverside and only used in in the admin.test.js can be used to see all user and edit user
 
 ## Open endpoints
 /api/login/new (POST)
