@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`app should rener App 1`] = `
+<div>
+  <center>
+    <div
+      class="error"
+      style="border: 1px solid red; background: Pink;"
+    >
+      An error occurred: 
+      ReferenceError: fetch is not defined
+      <div>
+        <button
+          class="button"
+        >
+          back
+        </button>
+         
+        <button
+          class="button"
+        >
+          login
+        </button>
+      </div>
+    </div>
+  </center>
+</div>
+`;

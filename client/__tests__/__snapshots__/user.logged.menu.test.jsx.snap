@@ -9,11 +9,6 @@ exports[`users should render logged inn page 1`] = `
     test
     ) role:(
     )
-    <button
-      class="button"
-    >
-      Logout
-    </button>
     <div>
       <div>
         <div>
@@ -33,6 +28,11 @@ exports[`users should render logged inn page 1`] = `
             </a>
           </div>
         </div>
+        <button
+          class="button"
+        >
+          chat
+        </button>
         <center>
           <div
             class="error"
@@ -82,6 +82,11 @@ exports[`users user not logged inn 1`] = `
         </a>
       </div>
     </div>
+    <button
+      class="button"
+    >
+      chat
+    </button>
     <h1>
       Loading....
     </h1>

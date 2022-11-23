@@ -37,6 +37,11 @@ exports[`loggedinn should rener itemmenu 1`] = `
             </a>
           </div>
         </div>
+        <button
+          class="button"
+        >
+          chat
+        </button>
         <center>
           <div
             class="error"

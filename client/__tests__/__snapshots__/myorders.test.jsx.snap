@@ -38,6 +38,16 @@ exports[`app should rener orders 1`] = `
       <h1>
         ORDER FOR USER: 
       </h1>
+      <button
+        class="button"
+      >
+        back
+      </button>
+      <button
+        class="button"
+      >
+        Logout
+      </button>
     </div>
     <div
       class="order"
@@ -74,14 +84,6 @@ exports[`app should rener orders 1`] = `
         total: 
       </div>
     </div>
-    <button>
-      back
-    </button>
-    <button
-      class="button"
-    >
-      Logout
-    </button>
   </div>
 </div>
 `;
