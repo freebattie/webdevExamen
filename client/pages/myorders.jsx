@@ -22,6 +22,10 @@ export function MyOrders() {
     <div className={"orders"}>
       <div className={"ordersheader"}>
         <h1>ORDER FOR USER: </h1>
+        <button className={"button"} onClick={() => navigate("/")}>
+          back
+        </button>
+        <LogOut />
       </div>
       {data.map((o) => {
         return (
@@ -44,8 +48,6 @@ export function MyOrders() {
           </div>
         );
       })}
-      <button onClick={() => navigate("/")}>back</button>
-      <LogOut />
     </div>
   );
 }

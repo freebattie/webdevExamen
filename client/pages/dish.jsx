@@ -5,6 +5,9 @@ export function Dish(props) {
   let nextId = number;
   useEffect(() => {
     setNumber(props.val);
+    const old = [...props.orders];
+    old[0] = null;
+    props.setOrders(old);
   }, []);
   async function handelAddToList() {
     setNumber((perv) => perv + 1);

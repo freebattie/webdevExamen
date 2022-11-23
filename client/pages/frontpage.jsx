@@ -20,12 +20,13 @@ export function FrontPage({ setError }) {
   if (error) {
     return <ErrorMsg error={error} />;
   }
-
+  console.log(user);
   return (
     <div>
       <h1>Modern Snack</h1>
+
       {user ? (
-        user.role === "user" ? (
+        user.role == "client" ? (
           <LoggedInnUsers user={user} reload={reload} setError={setError} />
         ) : (
           <LoggedInnEmployee user={user} reload={reload} setError={setError} />
@@ -33,9 +34,7 @@ export function FrontPage({ setError }) {
       ) : (
         <NotLoggedInnUsers setError={setError} />
       )}
-      <div>
-        <button onClick={(e) => navigate("/chat")}>chat</button>
-      </div>
+      <div></div>
     </div>
   );
 }

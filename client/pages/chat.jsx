@@ -9,13 +9,21 @@ function UserRegistrationForm({ onUsername }) {
     onUsername(username);
   }
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Username:
-        <input value={username} onChange={(e) => setUsername(e.target.value)} />
-      </label>
-      <button>Submit</button>
-    </form>
+    <center>
+      <form className={"loginChat"} onSubmit={handleSubmit}>
+        <div className={"loginChatfld"}>
+          <label>
+            Username:
+            <input
+              className={"input"}
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
+          </label>
+          <button className={"button"}>Submit</button>
+        </div>
+      </form>
+    </center>
   );
 }
 export function Chat() {

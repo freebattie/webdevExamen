@@ -26,20 +26,24 @@ export function Login({ setError }) {
       <h1>Please log in</h1>
       <div>
         <strong>Username:</strong>
-        <input value={username} onChange={(e) => setUsername(e.target.value)} />
+        <input
+          className={"input"}
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
       </div>
-      <footer>
+      <footer className={"pass"}>
         <strong>password:</strong>
         <input
+          className={"input"}
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
       </footer>
       <div>
-        <button>Log in</button>
+        <button className={"button"}>Log in</button>
       </div>
-      <pre>{JSON.stringify({ username, password }, undefined, "  ")}</pre>
     </form>
   );
 }

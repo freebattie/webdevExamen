@@ -2,11 +2,27 @@
 
 exports[`frontpage should rener frontpage 1`] = `
 <div>
-  <div
-    style="border: 1px solid red; background: Pink;"
-  >
-    An error occurred: 
-    ReferenceError: fetch is not defined
-  </div>
+  <center>
+    <div
+      class="error"
+      style="border: 1px solid red; background: Pink;"
+    >
+      An error occurred: 
+      ReferenceError: fetch is not defined
+      <div>
+        <button
+          class="button"
+        >
+          back
+        </button>
+         
+        <button
+          class="button"
+        >
+          login
+        </button>
+      </div>
+    </div>
+  </center>
 </div>
 `;

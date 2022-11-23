@@ -6,13 +6,21 @@
 
     font-family: 'Fira Sans', sans-serif;
 }
+.pass{
 
+    width: 700px;
+}
+.error{
+    width: 500px;
+    border: solid black 2px;
+}
+.login{
+    border: 1px solid black;
+}
 .menu{
     margin-top: 40px;
     padding: 100px;
     display: flex;
-
-    border: 1px solid black;
     flex-wrap: wrap;
     justify-content: center;
 
@@ -56,7 +64,7 @@ footer{
 }
 .order{
 
-    height: 300px;
+    height: 700px;
     border: 2px black solid;
     width: 300px;
     margin: 10px;
@@ -97,4 +105,44 @@ footer form {
 
 footer form input {
     flex: 1;
+}
+.loginChat{
+    margin-top: 300px;
+}
+.write-message {
+    border:none !important;
+    width:300px;
+    height: 65px;
+    margin-left: 20px;
+    padding: 10px;
+}
+.loginChatfld{
+    width: 300px;
+}
+.input{
+    border-bottom: black 1px solid;
+    width:300px;
+    height: 65px;
+    margin-left: 20px;
+    padding: 10px;
+}
+.input2{
+    border-bottom: black 1px solid;
+    width:500px;
+    height: 65px;
+    margin-left: 20px;
+    padding: 10px;
+}
+.footermove{
+    margin-left: 40%;
+
+}
+.border{
+    border: 2px solid black;
+}
+.headerText{
+    font-size: 30px;
+}
+.formsize{
+    width: 500px;
 }
