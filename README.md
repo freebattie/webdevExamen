@@ -5,13 +5,16 @@ exam-freebattie created by GitHub Classroom
 https://modernsnack.azurewebsites.net/
 ## Details:
 
-### ISSIUES
+## ISSIUES
+
+### SECRETS
 repo was not setup from the teacher in a way where i was abel to use github secrets
 had to hardcode and also upload a .inv file to github to get CI/CD up and running
 I know this is not how you do it in the real world, i would normaly never upload this.
 but due to the limits on the repo and demand for ci/cd and since the repo is private 
 i decided to hardcode the azure info to the yml file and the database info in the .inv file
 
+### Classrom ran out of 
 
 ### users
 ### starting users:
