@@ -10,8 +10,8 @@ import { Dish } from "../pages/dish.jsx";
 import { Dishes } from "../pages/dishes.jsx";
 
 global.IS_REACT_ACT_ENVIRONMENT = true;
-/* describe("dish", () => {
-  it("should rener dish", async function () {
+describe("dish", () => {
+  /* it("should rener dish", async function () {
     const element = document.createElement("div");
     const mockFetchPromise = jest.fn();
 
