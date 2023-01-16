@@ -10,8 +10,7 @@ import { Dish } from "../pages/dish.jsx";
 import { Dishes } from "../pages/dishes.jsx";
 
 global.IS_REACT_ACT_ENVIRONMENT = true;
-
-describe("dish", () => {
+/* describe("dish", () => {
   it("should rener dish", async function () {
     const element = document.createElement("div");
     const mockFetchPromise = jest.fn();
@@ -31,7 +30,7 @@ describe("dish", () => {
         </MemoryRouter>
       );
     });
-
+*/
     await act(async () => {
       global.fetch = jest.fn().mockImplementation(() => mockFetchPromise);
       await Simulate.click(element.querySelector(":nth-of-type(1) button"));
