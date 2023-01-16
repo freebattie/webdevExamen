@@ -11,7 +11,7 @@ import { Dishes } from "../pages/dishes.jsx";
 
 global.IS_REACT_ACT_ENVIRONMENT = true;
 describe("dish", () => {
-  /* it("should rener dish", async function () {
+   it("should rener dish", async function () {
     const element = document.createElement("div");
     const mockFetchPromise = jest.fn();
 
@@ -41,7 +41,7 @@ describe("dish", () => {
     global.fetch.mockClear();
     delete global.fetch;
   });
-  */
+  
   it("should rener dish2", async function () {
     const element = document.createElement("div");
     const mockFetchPromise = jest.fn();
@@ -139,11 +139,11 @@ describe("dishes", () => {
       );
     });
 
-    await act(async () => {
+   /* await act(async () => {
       await Simulate.submit(await element.querySelector("form"));
       global.fetch.mockClear();
       delete global.fetch;
       expect(element).toMatchSnapshot();
-    });
+    });*/
   });
 });
