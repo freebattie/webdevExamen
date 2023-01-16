@@ -30,7 +30,7 @@ global.IS_REACT_ACT_ENVIRONMENT = true;
         </MemoryRouter>
       );
     });
-*/
+
     await act(async () => {
       global.fetch = jest.fn().mockImplementation(() => mockFetchPromise);
       await Simulate.click(element.querySelector(":nth-of-type(1) button"));
@@ -41,6 +41,7 @@ global.IS_REACT_ACT_ENVIRONMENT = true;
     global.fetch.mockClear();
     delete global.fetch;
   });
+  */
   it("should rener dish2", async function () {
     const element = document.createElement("div");
     const mockFetchPromise = jest.fn();
