@@ -4,6 +4,8 @@ exam-freebattie created by GitHub Classroom
 ## azure link
 https://modernsnack.azurewebsites.net/
 ## Details:
+Webdev and API exam where I had 48h to create a website with login,menu,orders a chat and 80% test coverage, css and html was not used time on at all.
+
 
 ### ISSIUES
 repo was not setup from the teacher in a way where i was abel to use github secrets
@@ -103,7 +105,7 @@ when you are logged in as administrator or employ you can see all users orders
     * [x] 50% coverage
     * [x] 60% coverage
     * [x] 70% coverage
-    * [ ] 80% coverage
+    * [x] 80% coverage
   ###FRONTEND
   
     * [x] 50% coverage
