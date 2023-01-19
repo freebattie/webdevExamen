@@ -7,13 +7,6 @@ https://modernsnack.azurewebsites.net/
 Webdev and API exam where I had 48h to create a website with login,menu,orders a chat and 80% test coverage, css and html was not used time on at all.
 
 
-### ISSIUES
-repo was not setup from the teacher in a way where i was abel to use github secrets
-had to hardcode and also upload a .inv file to github to get CI/CD up and running
-I know this is not how you do it in the real world, i would normaly never upload this.
-but due to the limits on the repo and demand for ci/cd and since the repo is private 
-i decided to hardcode the azure info to the yml file and the database info in the .inv file
-
 
 ### users
 starting users:
@@ -61,9 +54,9 @@ when you are logged in as administrator or employ you can see all users orders
 
 * [x] Some form of Login and access control
 * [x] Jest tests
- * [x] Snapshot tests
- * [x] Simulate + jest.fn
- * [x] Supertest
+* [x] Snapshot tests
+* [x] Simulate + jest.fn
+* [x] Supertest
 * [x] Github Actions with coverage report
 * [x] Deployment to cloud (in this case, Azure)
 * [x] Mongodb
@@ -76,9 +69,9 @@ when you are logged in as administrator or employ you can see all users orders
 * [x] 2 react pages whit react router (R1)
 * [x] add state to at least one page(R1)
 * [x] navigate back or homepage(R1)
-* [] at lest one GET,POST,PUT and DELETE format is json(R2)
+* [x] at lest one GET,POST,PUT and DELETE format is json(R2)
 * [x] RESTful api using Fetch(R2)
-* []  endpoints listed in readme(R4)
+* [x]  endpoints listed in readme(R4)
 * [x] integration whit github actions and run tests(R2)
 * [x] login using cookies(R3)
 * [x] loginpage(R3)
@@ -93,7 +86,7 @@ when you are logged in as administrator or employ you can see all users orders
 * [x] 401 user not loged inn at all(R4)
 * [x] 403 loged in but dont have permission(r4)
 * [x] GET,POST,PUT and DELETE(R2)
-* [ ] list all test for endpoints in readmefile(R4)
+* [x] list all test for endpoints in readmefile(R4)
 * [x] mark public endpoints in the endpoint(R4)
 * [x] create asecurity-test.js that test 401 and 403(R4)( had to spread them out in all 3 server endpoints files)
 * [x] integration whit github actions and run tests(R3)
