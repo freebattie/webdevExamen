@@ -9,19 +9,19 @@ Webdev and API exam where I had 48h to create a website with login,menu,orders a
 
 
 ### users
-starting users:
-username: hansemann
-password: 4321
-username:Petter123
-password:1234
+* starting users:
+* username: hansemann
+* password: 4321
+* username:Petter123
+* password:1234
 
-admin
-username:administrator
-password:1234;
+### admin
+* username:administrator
+* password:1234;
 
-emp
-username:emp
-password:1234
+### emp
+* username:emp
+* password:1234
 
 when you get to the homepage you can see all dishes but if you try to order when not logged inn
 you get a error message and link to home/login
